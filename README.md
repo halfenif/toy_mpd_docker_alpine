@@ -30,5 +30,5 @@ change docker-compose.yml file
 
 ## Description
 Streamlit으로 MPD Client를 개발하기 위해 복수의 MPD가 필요해서 구성한 Docker환경입니다.
-This is a Docker environment created because multiple MPDs are needed to develop an MPD Client with Streamlit.\
+This is a Docker environment created because multiple MPDs are needed to develop an MPD Client with Streamlit.
 
