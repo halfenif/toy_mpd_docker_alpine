@@ -1,0 +1,28 @@
+version: '2.4'
+services:
+
+  mpd01:
+    image: toy_mpd_docker_alpine:latest
+    container_name: mpd01
+    restart: unless-stopped
+    ports:
+      - 6601:6600/tcp  # MPD Client
+    #  - 8000:8000/tcp  # Stream
+    ## PipeWire support
+    #environment:
+      #- XDG_RUNTIME_DIR=/tmp
+    volumes:
+      - ~/music/folder_target:/var/lib/mpd/music:z
+
+  mpd02:
+    image: toy_mpd_docker_alpine:latest
+    container_name: mpd02
+    restart: unless-stopped
+    ports:
+      - 6602:6600/tcp  # MPD Client
+    #  - 8000:8000/tcp  # Stream
+    ## PipeWire support
+    #environment:
+      #- XDG_RUNTIME_DIR=/tmp
+    volumes:
+      - ~/music/folder_target:/var/lib/mpd/music:z
