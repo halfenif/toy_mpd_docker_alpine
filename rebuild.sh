@@ -1,5 +1,5 @@
-docker builder prune -af
-docker image prune -af
+#docker builder prune -af
+#docker image prune -af
 docker pull alpine:latest
 docker build --tag toy_mpd_docker_alpine .
 
