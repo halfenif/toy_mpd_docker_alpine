@@ -14,9 +14,19 @@
 git clone https://github.com/halfenif/toy_mpd_docker_alpine.git
 ```
 
-### Set MP3 Folder
-Default folder path **'~/music/folder_target'**
-change docker-compose.yml file
+## Change Config
+```bash
+cp ./.env.sample ./.env
+```
+
+**./.env**  
+- FOLDER_TARGET=""  # MPD music folder
+
+1. Don't use symbolic link
+2. Docker run user is root
+3. Podman run user is login user
+4. Be carefull folder and file permission
+
 
 ### Set MPD Port (Option)
 - MPD01: 6601
