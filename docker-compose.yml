@@ -8,7 +8,7 @@ services:
     ports:
       - 6601:6600/tcp  # MPD Client
     volumes:
-      - ${FOLDER_TARGET}:/app/target:z  # look .env
+      - ${FOLDER_TARGET}:/var/lib/mpd/music:z  # look .env
 
   mpd02:
     image: toy_mpd_docker_alpine:latest
@@ -17,4 +17,4 @@ services:
     ports:
       - 6602:6600/tcp  # MPD Client
     volumes:
-      - ${FOLDER_TARGET}:/app/target:z  # look .env
+      - ${FOLDER_TARGET}:/var/lib/mpd/music:z  # look .env
