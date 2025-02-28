@@ -7,6 +7,8 @@ services:
     restart: unless-stopped
     ports:
       - 6601:6600/tcp  # MPD Client
+    networks:
+      - deploy_network      
     volumes:
       - ${FOLDER_TARGET}:/var/lib/mpd/music:z  # look .env
 
@@ -16,6 +18,8 @@ services:
     restart: unless-stopped
     ports:
       - 6602:6600/tcp  # MPD Client
+    networks:
+      - deploy_network      
     volumes:
       - ${FOLDER_TARGET}:/var/lib/mpd/music:z  # look .env
 
