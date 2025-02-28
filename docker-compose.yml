@@ -18,3 +18,7 @@ services:
       - 6602:6600/tcp  # MPD Client
     volumes:
       - ${FOLDER_TARGET}:/var/lib/mpd/music:z  # look .env
+
+networks:
+  deploy_network:
+    driver: bridge
